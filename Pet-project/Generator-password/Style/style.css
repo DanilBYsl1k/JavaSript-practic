@@ -1,0 +1,153 @@
+@font-face {
+    font-family:MouseMemoirs ;
+    src: url(../fonts/MouseMemoirs-Regular.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family:'Oswald' ;
+    src: url(../fonts/Oswald/Oswald-VariableFont_wght.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+*{
+    margin: 0;
+    font-family: 'Oswald';
+    
+}
+body{
+    background-color:rgb(255, 236, 195) ;
+}
+.container{
+
+    max-width: 700px;
+    margin: auto;
+    margin-top: 40px;
+}
+.title{
+    text-align: center;
+    font-family: sans-serif;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+    text-align: center;
+}
+.Reliability{
+    height: 30px;
+}
+.text{
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+}
+.range{
+    margin: 10px 0;
+}
+.btn{
+    border: none;
+    background-color: darkseagreen;
+    cursor: pointer;
+    width: 100%;
+    font-size:30px;
+    transition: 0.1s ease;
+}
+.btn:focus{
+    box-shadow: 0px 0px 10px 0px;
+}
+.out{
+    text-align: center;
+}
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 15px;
+}
+.inputs input{
+    
+    transition: 0.4s ease;
+}
+.inputs input:hover{
+    box-shadow: 0px 0px 10px 0px black;
+}
+
+.hiden-text{
+    position: absolute;
+    width: 500px;
+    text-align: center;
+    bottom:220px;
+    left: 31%;
+    background: white;
+    padding: 10px;
+    border: 3px saddlebrown solid;
+    font-size:30px;
+    display: none;
+    transition: 1s ease;
+}
+.active{
+    display: block;
+}
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+
+
+  .custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+
+  .custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50px;
+    margin-right: 2px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    margin:10px ;
+  }
+
+
+  .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #5491d6;
+  }
+
+  .custom-checkbox:not(:disabled):active+label::before {
+    background-color: #b9ffb3;
+    border-color: #b3d7ff;
+  }
+
+
+  .custom-checkbox:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+
+  .custom-checkbox:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+  }
+
+
+  .custom-checkbox:checked+label::before {
+    border-color: #ffffff;
+    background-color: #0bef44;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+  }
+
+  /* стили для чекбокса, находящегося в состоянии disabled */
+  .custom-checkbox:disabled+label::before {
+    background-color: #efe9e9;
+  }
