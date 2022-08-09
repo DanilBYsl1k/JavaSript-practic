@@ -1,6 +1,16 @@
+@font-face {
+    font-family:'Oswald' ;
+    src: url(Oswald/Oswald-VariableFont_wght.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+*{
+    font-family:'Oswald' ;
+}
 body{
     background: linear-gradient(100deg, #9D57E1 50%, #3E8EC5 100%);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
 }
 .main-container{
     /* border: 3px solid black; */
@@ -37,7 +47,7 @@ body{
     width: 100%;
     margin: 10px;
     font-size: 20px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Oswald';
     cursor: pointer;
     background-color:rgb(238, 194, 0) ;
     color: rgb(0, 0, 0);
