@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="content">
+        <div class="main-img-weather">
+            <h1>Now weather</h1>
+            <div class="main-img"></div>
+            <div class="temperature"></div>
+            <div class="date_city">
+                <h2 class="title-sity"></h2> 
+            </div>
+            <div class="time"></div>
+            <button class="my-city">Search my city</button>
+        </div>
+        <div class="whethersa">
+            <h2>Whethersa</h2>
+            <ul class="week-weather">
+                <li class="one-day"><p>Tue</p><img src="image/sun.png" alt=""><p>12&degC</p></li>
+                <li class="two-day"><p>Wed</p><img src="image/sun.png" alt=""><p>12&degC</p></li>
+                <li class="three-day"><p>Thu</p><img src="image/sun.png" alt=""><p>12&degC</p></li>
+                <li class="four-day"><p>Fri</p><img src="image/sun.png" alt=""><p>12&degC</p></li>
+                <li class="five-day"><p>Sat</p><img src="image/sun.png" alt=""><p>12&degC</p></li>
+            </ul>
+        </div>
+        <div class="today">
+            <h3>Today's Higlights</h3>
+            <ul class="Indicators">
+                <li class="wind-status "></li>
+                <li class="feels_like"></li>
+                <li class="main"></li>
+                <li class="humidity"></li>
+                <li class="visibility"></li>
+                <li class="country"></li>
+            </ul>
+        </div>
+    </section>
+    <section class="map">
+        <div class="container container-map">
+            <h2 class="selection-city-title">Choice-city</h2>
+            <div class="wraper-map">
+                <img src="image/ukraine.svg" alt="">
+                <div class="bals-wraper kyiv " data-lat="50.45466" data-lon="30.5238"><p>Kyiv</p><div class="bals " title="kyiv"></div></div>
+                <div class="bals-wraper kharkiv" data-lat="49.988358" data-lon="36.232845"><p>Kharkiv</p><div class="bals " title="kharkiv"></div></div>
+                <div class="bals-wraper lviv" data-lat="49.842957" data-lon="24.031111"><p>Lviv</p><div class="bals " title="lviv"  ></div></div>
+                <div class="bals-wraper odesa" data-lat="46.482952" data-lon="30.712481"><p>Odesa</p><div class="bals " title="odesa" ></div></div>
+                <div class="bals-wraper dnipro" data-lat="48.450001" data-lon="34.983334"><p>Dnipro</p><div class="bals " title="dnipro" ></div></div>
+            </div>
+        </div>
+    </section>
+    <script src="script/script.js"></script>
+</body>
+</html>
