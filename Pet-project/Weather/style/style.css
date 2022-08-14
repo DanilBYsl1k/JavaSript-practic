@@ -8,7 +8,7 @@ body{
 }
 .content{
     display: grid;
-    width: 1330px;
+    width: 1290px;
     margin: auto;
     gap: 10px;
     height: 100%;
