@@ -1,0 +1,657 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@font-face {
+  font-family: "Circe Rounded light";
+  src: url("../fonts/CirceRounded/CirceRounded-ExtraLight.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Circe Rounded regular";
+  src: url("../fonts/CirceRounded/CirceRounded-Regular.woff2") format("woff2");
+}
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  background-color: #faf8f2;
+}
+
+.block-page {
+  overflow: hidden;
+}
+
+.container {
+  width: 1250px;
+  margin: auto;
+}
+
+.section-aside {
+  border-bottom: 1px solid #F4F0E6;
+}
+
+.container-aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-family: "roboto";
+}
+
+.header-city_navigatoin {
+  display: flex;
+}
+.header-city_navigatoin div {
+  display: flex;
+  margin: 0 20px 0px 0px;
+}
+.header-city_navigatoin img {
+  width: 30px;
+}
+
+.navigation_aside {
+  display: flex;
+  align-items: center;
+}
+.navigation_aside ul {
+  display: flex;
+  padding: 0;
+  align-items: center;
+}
+.navigation_aside ul li {
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.setion-features {
+  border-bottom: 1px solid #F4F0E6;
+  height: 110px;
+}
+
+.feature {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid #F4F0E6;
+  height: 100%;
+}
+.feature li {
+  color: #808080;
+  display: flex;
+  align-items: center;
+  width: 160px;
+  font-size: 15px;
+}
+.feature li img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+.link-login {
+  display: flex;
+}
+.link-login img {
+  width: 30px;
+}
+.link-login button {
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.features-wraper {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  font-family: "roboto";
+}
+
+.contact-social {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  padding-left: 15px;
+  border-right: 1px solid #F4F0E6;
+}
+
+.messenger {
+  display: flex;
+  padding: 0;
+  height: 35px;
+  padding: 15px;
+  align-items: center;
+}
+.messenger li {
+  margin: 0 5px;
+}
+
+.number_phone p {
+  margin: 4px;
+}
+.number_phone button {
+  display: flex;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  border: #FD9339 1px solid;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+.number_phone img {
+  width: 20px;
+}
+
+.logo {
+  margin-right: 5px;
+  display: flex;
+}
+
+.logo-cheace {
+  width: 30px;
+}
+
+.basket-link {
+  width: 190px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 67px;
+}
+.basket-link img {
+  cursor: pointer;
+  margin: 0;
+  width: 60px;
+}
+
+.count-price {
+  align-items: center;
+  display: flex;
+}
+
+.count {
+  color: #FD9339;
+  font-weight: 700;
+  text-align: end;
+}
+
+.section-navigation {
+  font-family: "roboto";
+  font-size: 15px;
+  border-bottom: 1px solid #F4F0E6;
+}
+
+.main-nav ul {
+  padding: 0;
+  display: flex;
+}
+.main-nav ul li {
+  padding-right: 20px;
+}
+.main-nav ul li a {
+  color: black;
+}
+
+.button {
+  font-family: "Circe Rounded light";
+  background-color: #FD9339;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.section-recommendations {
+  margin: 20px 0px;
+}
+
+.container-recommendations {
+  display: grid;
+  grid-template-columns: 54% 23% 23%;
+  gap: 3px;
+  font-family: "Circe Rounded light";
+  min-height: 300px;
+  background-repeat: no-repeat;
+  color: rgb(255, 255, 255);
+}
+.container-recommendations h2 {
+  font-family: "Circe Rounded regular";
+  font-size: 30px;
+  margin: 5px;
+}
+.container-recommendations p {
+  font-size: 20px;
+}
+
+.cheese_making-box {
+  background-image: url(../images/imagecheese_making.png);
+  padding: 10px;
+  height: 100%;
+}
+.cheese_making-box a {
+  color: white;
+}
+
+.wraper-link_cheese_making {
+  margin-top: 120px;
+}
+
+.recepy-box {
+  padding: 10px;
+  background-image: url(../images/imageRecepy.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.recepy-box p {
+  color: #FD9339;
+  margin: 5px;
+}
+
+.sales-box {
+  padding: 10px;
+  background-image: url(../images/imageSales.png);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.sales-box p {
+  color: #FD9339;
+  margin: 5px;
+}
+
+.section-features {
+  background-color: #FBE8BB;
+  margin: 40px 0;
+}
+
+.container-features {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+
+.features-title h2 {
+  font-family: "Circe Rounded regular";
+  font-size: 70px;
+  margin: 0;
+}
+.features-title p {
+  font-family: "Circe Rounded light";
+  font-weight: 600;
+}
+
+img {
+  width: 100%;
+}
+
+.wrap-features {
+  position: relative;
+}
+
+.ball-item {
+  border-radius: 50%;
+  color: white;
+  background-color: #E78634;
+  box-shadow: 0px 0px 10px 0px #FD9339;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 1000;
+  cursor: pointer;
+}
+
+.inner-text_ball {
+  display: none;
+  position: absolute;
+  background-color: white;
+  pointer-events: none;
+  top: -70px;
+  left: -250px;
+  width: 250px;
+  height: 80px;
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
+  font-family: "Circe Rounded light";
+  border: 1px solid #FD9339;
+}
+.inner-text_ball img {
+  width: 20px;
+  margin: 10px;
+}
+
+.award-wraper {
+  top: 260px;
+  left: 160px;
+}
+
+.percent-wraper {
+  bottom: 60px;
+  left: 60px;
+}
+
+.clock-wraper {
+  top: 180px;
+  left: 400px;
+}
+
+.dolar-wraper {
+  top: 380px;
+  left: 400px;
+}
+
+.like-wraper {
+  top: 290px;
+  left: 600px;
+}
+
+.selection {
+  margin: 20px 0;
+}
+
+.container-selection h2 {
+  font-family: "Circe Rounded regular";
+  font-size: 30px;
+  color: #4E2D2D;
+}
+.container-selection h3 {
+  text-transform: uppercase;
+  font-family: "Circe Rounded regular";
+  font-size: 30px;
+}
+
+.selection-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  height: 100%;
+}
+.selection-box p {
+  font-family: "Circe Rounded light";
+  font-weight: 600;
+}
+
+.wraper-button_selection-box {
+  margin-top: 150px;
+}
+
+.recipes {
+  background-color: #D8D8D8;
+  padding: 10px 20px;
+  color: #4E2D2D;
+  border-radius: 5px;
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.text-selection-box {
+  z-index: 2;
+}
+
+.img-recipes {
+  position: absolute;
+  width: 380px;
+  bottom: -10px;
+  right: 0;
+  z-index: 1;
+}
+
+.sets {
+  padding: 10px 20px;
+  background-color: #4E2D2D;
+  color: white;
+  width: 100%;
+  height: 350px;
+  position: relative;
+  border-radius: 5px;
+}
+
+.img-set {
+  position: absolute;
+  width: 380px;
+  bottom: 10px;
+  right: 0;
+  z-index: 1;
+}
+
+.equipment {
+  margin: 10px 0;
+}
+
+.section-equipment {
+  margin: 20px 0;
+}
+
+.container-equipment {
+  background-color: #FEE9A5;
+  padding: 60px;
+  position: relative;
+  height: 350px;
+}
+.container-equipment p {
+  font-family: "Circe Rounded light";
+  font-size: 17px;
+  font-weight: 600;
+}
+.container-equipment h2 {
+  text-transform: uppercase;
+  font-family: "Circe Rounded regular";
+  font-size: 30px;
+}
+.container-equipment img {
+  position: absolute;
+}
+
+.press-in_cheace {
+  bottom: 0;
+  right: 0;
+  width: 400px;
+}
+
+.press-in_cheasebig {
+  bottom: 0;
+  right: 0;
+  top: 0;
+  width: 540px;
+}
+
+.press-in_cheasebigOp {
+  top: 0;
+  right: 250px;
+  width: 400px;
+}
+
+.wraper-button_equipment {
+  margin-top: 50px;
+}
+
+.section-article {
+  margin: 10px 0;
+}
+
+.container-article {
+  display: grid;
+  grid-template-areas: "article chease_plate cheace_hole" "article diet chease_head";
+  gap: 10px;
+}
+.container-article .link_next {
+  color: #FD9339;
+  font-family: "Circe Rounded light";
+  text-decoration: underline;
+  font-weight: 600;
+}
+.container-article h2 {
+  font-family: "Circe Rounded regular";
+}
+.container-article p {
+  font-family: "Circe Rounded light";
+  font-size: 17px;
+  font-weight: 600;
+}
+.container-article h3 {
+  font-family: "Circe Rounded regular";
+}
+
+.article {
+  grid-area: article;
+  background-color: #FEE9A5;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.text_artticle {
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.box-article {
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid #E7E7E7;
+}
+
+.section-last-view {
+  margin: 40px 0;
+}
+
+.container-last-view {
+  overflow: hidden;
+}
+
+.header-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-slider h2 {
+  font-family: "Circe Rounded regular";
+  color: #4E2D2D;
+}
+
+.btn-slider img {
+  cursor: pointer;
+  max-width: 30px;
+  margin: 0 5px;
+  padding: 10px;
+}
+
+.slider-line {
+  display: flex;
+  -moz-column-gap: 9px;
+       column-gap: 9px;
+  transition: 0.4s ease;
+  transform: translate(0px);
+  width: 100%;
+}
+
+.card {
+  border: 2px solid #E7E7E7;
+  padding: 10px;
+  background-color: white;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  align-items: center;
+  font-family: "Circe Rounded light";
+  font-weight: 1000;
+}
+.card img {
+  width: 180px;
+}
+
+.price-card {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-footer {
+  background-color: white;
+}
+.page-footer h2 {
+  font-family: "Circe Rounded regular";
+}
+.page-footer ul {
+  padding: 0;
+}
+.page-footer li {
+  font-family: "Circe Rounded light";
+  font-weight: 1000;
+}
+
+.container-footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.container-footer nav {
+  display: flex;
+}
+.container-footer nav div {
+  margin: 0 20px;
+}
+.container-footer nav li {
+  padding: 10px 0;
+}
+
+.logo-text {
+  width: 200px;
+}
+
+.logo-cheace {
+  width: 40px;
+  transform: rotate(-15deg);
+}
+
+.pay ul {
+  display: flex;
+}
+.pay ul li {
+  padding: 0 5px;
+}
+.pay img {
+  width: 30px;
+}
+
+.footer-city_navigatoin div {
+  display: flex;
+}
+.footer-city_navigatoin div p {
+  margin: 5px 0;
+}
+.footer-city_navigatoin img {
+  width: 20px;
+}
+.footer-city_navigatoin h3 {
+  color: #4E2D2D;
+  font-family: "Circe Rounded regular";
+}
+.footer-city_navigatoin p {
+  font-family: "Circe Rounded light";
+  font-weight: 1000;
+}
+
+.active-ball {
+  display: flex;
+}/*# sourceMappingURL=style.css.map */
