@@ -8,10 +8,11 @@
   overflow: scroll;
   width: 100%;
   background-color: #faf8f2;
-  height: 100%;
+  height: 100vh;
   top: 50px;
   transition: 1s ease;
   transform: translateY(-140%);
+  z-index: 2;
 }
 
 .wraper_nav-phone {
@@ -71,11 +72,25 @@
   .features-wraper {
     justify-content: space-between;
   }
+  .logo-text {
+    width: 180px;
+  }
   .feature {
-    display: none;
+    width: 400px;
+  }
+  .feature p {
+    width: 80px;
+    font-size: 11px;
   }
   .container-equipment p {
     width: 350px;
+  }
+  .contact-social {
+    padding: 0;
+    padding-right: 10px;
+  }
+  .messenger img {
+    width: 20px;
   }
 }
 @media (max-width: 1100px) {
@@ -113,6 +128,9 @@
     top: 0;
     right: 160px;
     width: 400px;
+  }
+  .feature {
+    display: none;
   }
 }
 @media (max-width: 900px) {
@@ -182,10 +200,9 @@
     width: 340px;
   }
   .press-in_cheasebigOp {
-    top: 0;
-    right: 250px;
-    width: 400px;
-    display: none;
+    top: 0px;
+    right: 200px;
+    width: 200px;
   }
 }
 @media (max-width: 750px) {
@@ -237,8 +254,13 @@
   .container-footer nav div {
     margin: 0 10px;
   }
+  .press-in_cheasebigOp {
+    top: 220px;
+    right: 20px;
+    width: 150px;
+  }
 }
-@media (max-width: 750px) and (max-width: 450px) {
+@media (max-width: 450px) {
   .container {
     width: 300px;
     outline: 3px rgb(233, 129, 202) solid;
@@ -301,7 +323,9 @@
     width: 100%;
   }
   .press-in_cheace {
-    display: none;
+    bottom: 0;
+    right: 0;
+    width: 100px;
   }
   .wraper-button_equipment {
     margin-top: 15px;
@@ -311,5 +335,8 @@
   }
   .container-equipment {
     padding: 20px;
+  }
+  .press-in_cheasebigOp {
+    display: none;
   }
 }/*# sourceMappingURL=style-phone.css.map */

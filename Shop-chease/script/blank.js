@@ -1,25 +1,27 @@
-let balls=document.querySelectorAll('.ball-item')
+localStorage.getItem('card')
+let a=localStorage.getItem('Card')
 
 
-balls.forEach(function(element){
-    element.addEventListener('click',function(){
-        document.querySelectorAll('.inner-text_ball').forEach(elementText => {
-            elementText.classList.remove('active-ball')
-        });
-        element.lastElementChild.classList.add('active-ball')
+let CardBlank=JSON.parse(a)
+
+function CreateBlank(){
+    document.querySelector('.price').innerText=CardBlank.price
+    document.querySelector('h1').innerText=CardBlank.name
+    document.querySelector('.article-blank').innerText=' '+CardBlank.id
+    document.querySelector('.title-card-page').innerText=CardBlank.name
+    document.querySelectorAll('.main-foto-page-blank img').forEach(function(Element){
+        Element.src=CardBlank.img
     })
-})
-// console.log(balls)
-document.addEventListener('click',function(trg){
-    balls.forEach(function(elem){
-        if(trg.target!==elem){
-            elem.lastElementChild.classList.remove('active-ball')
-        }
-    })
-})
+
+}
+CreateBlank()
 
 
-///////////////////////////////////slider
+
+
+
+
+
 const cardsSld=document.querySelectorAll('.card')
 const sliderLine=document.querySelector('.slider-line')
 let count=0;
@@ -50,7 +52,3 @@ document.querySelector('.slider-move_right').addEventListener('click',function()
 function rollSlider(){
     sliderLine.style.transform=`translate(-${count*209}px`
 }
-
-
-//////////////////////////////////////////phone
-

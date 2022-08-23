@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style-phone.css">
+    <link rel="stylesheet" href="style/style_catalog.css">
     <link rel="shortcut icon" href="images/CheaseLogo.svg" type="image/x-icon">
     <title>Cыроварение</title>
 </head>
 <body class="page ">
+    <div class="overlay"></div>
     <header>
         <section class="section-aside">
             <div class="container container-aside">
@@ -37,7 +39,9 @@
         <section class="setion-features">
             <div class="container features-wraper">
                 <div class="logo">
-                    <img class="logo-cheace" src="images/CheaseLogo.svg" alt="chease"><img src="images/Logo-text.svg" alt="">
+                    <a href="index.html">
+                        <img class="logo-cheace" src="images/CheaseLogo.svg" alt="chease"><img src="images/Logo-text.svg" alt="">
+                    </a>
                 </div>
                 <ul class="feature">
                     <li><img src="images/delivery.svg" alt=""><p>Бесплатная доставка</p></li>
@@ -56,7 +60,8 @@
                     </div>
                 </div>
                 <div class="basket-link">
-                    <div class="count-price"><p>Ваша корзина</p><p class="count">000</p></div><img src="images/shopping-cart 1.svg" data-busket="busket" alt="busket">
+                    <div class="count-price"><p>Ваша корзина</p><p class="final-price">000 </p><span> -грн</span></div><img class="link-basket" src="images/shopping-cart 1.svg" data-busket="busket" alt="busket"><span class="item-count_busket absolute-count-basket">0</span>
+                    
                 </div>
             </div>
         </section>
@@ -88,7 +93,7 @@
             </div>
             <nav class="nav-phone">
                 <ul class="wraper_nav-phone">
-                    <li><a href="">Ассортимент</a></li>
+                    <li><a href="index.html">Главная</a></li>
                     <li><a href="">Рецепты</a></li>
                     <li><a href="">Доставка и оплата</a></li>
                     <li><a href="">Калькулятор Сыродела</a></li>
@@ -103,6 +108,58 @@
             
         </section>
     </header>
+    <main>
+        <section class="section-breadcrums">
+            <div class="container container-breadcrums">
+                <ul class="wraper-breadcrums">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Ассортимент</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="section-catalog">
+            <div class="container container-catalog">
+                <div class="filter-wraper">
+                    <div class="ingredients-filter filter">
+                        <h2 class="title-filters"><img src="images/cheese 1.svg" alt=""> Ингредиенты</h2>
+                        <ul class="filtr-box">
+                            <li data-filter="chease" class="filters-class">Закваски для сыра</li>
+                            <li data-filter="ferment" class="filters-class">Ферменты для сыра</li>
+                            <li data-filter="mildew" class="filters-class">Плесень для сыра</li>
+                        </ul>
+                    </div>
+                    <div class="equipment-filter filter">
+                        <h2 class="title-filters"><img src="images/cereal-bowl 1.svg" alt=""> Оборудование</h2>
+                        <ul class="filtr-box">
+                            <li data-filter="chease"  class="filters-class">Формы для сыра</li>
+                            <li data-filter="ferment"  class="filters-class">Латексное покрытие</li>
+                            <li data-filter="mildew" class="filters-class">Воск для сыра</li>
+                        </ul>
+                    </div>
+                    <ul class="filtr-box">
+                        <button class="clear_all button" data-filter="all">Очистить всё</button>
+                    </ul>
+                </div>
+                <div class="main-content-page">
+                    <div class="page-title">
+                        <h1>Кисломолочные закваски</h1>
+                        <div class="filter-button"><img src="images/imageFiltr.svg" alt=""><p>Фильтр</p></div>
+                    </div>
+                    <div class="wraper-filters-line">
+                        <ul class="filtrs-line">
+                            <li class="big-price">От дорогих к дешевым</li>
+                            <li class="low-price">От дешевых к дорогим</li>
+                            <li class="rate">По рейтингу</li>    
+                        </ul>
+                        <input type="text" id="search" placeholder="поиск">
+                    </div>
+                    <div class="cards-wraper">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
     <footer class="page-footer">
         <section class="footer">
             <div class="container container-footer">
@@ -145,7 +202,27 @@
             </div>
         </section>
     </footer>
-    <script src="script/index.js"></script>
+    <div class="modal-basket">
+        <h2>Корзина <span class="count-item"></span></h2>
+        <h2 class="basket_empty">Корзина пуста</h2>
+        <ul class="basket_cards">
+        </ul>
+        <div class="full-basket">
+            <h4>Товаров в корзине:<span class="item-count_busket">0</span></h4>
+            <h4>Общая стоимость:<span class="final-price">0</span></h4>
+            <div class="btn-wraper_order">
+                <a href="" class="button">Оформить заказ</a>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-btn" title="на верх">
+        <div class="swipe-up"></div>
+    </div>
+    <div class="notification-add-goods"><h2><span class="title-notification-add-goods"></span> добавлен в корзину</h2></div>
+    <script src="script/catalogList.js"></script>
+    <script src="script/class.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/catalog.js"></script>
 </body>
 </html>
 

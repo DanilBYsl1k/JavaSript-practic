@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/style-phone.css">
+    <link rel="stylesheet" href="style/style_catalog.css">
+    <link rel="stylesheet" href="style/blank.css">
     <link rel="shortcut icon" href="images/CheaseLogo.svg" type="image/x-icon">
     <title>Cыроварение</title>
 </head>
 <body class="page ">
+    <div class="overlay"></div>
     <header>
         <section class="section-aside">
             <div class="container container-aside">
@@ -38,9 +41,9 @@
             <div class="container features-wraper">
                 <div class="logo">
                     <a href="index.html">
-                    <img class="logo-cheace" src="images/CheaseLogo.svg" alt="chease"><img class="logo-text" src="images/Logo-text.svg" alt="">
+                    <img class="logo-cheace" src="images/CheaseLogo.svg" alt="chease"><img src="images/Logo-text.svg" alt="">
                     </a>
-                </div>
+                    </div>
                 <ul class="feature">
                     <li><img src="images/delivery.svg" alt=""><p>Бесплатная доставка</p></li>
                     <li><img src="images/Cardpay.svg" alt=""><p>Скидка при оплате на сайте</p></li>
@@ -91,7 +94,7 @@
             </div>
             <nav class="nav-phone">
                 <ul class="wraper_nav-phone">
-                    <li><a href="catalog.html">Ассортимент</a></li>
+                    <li><a href="index.html">Главная</a></li>
                     <li><a href="">Рецепты</a></li>
                     <li><a href="">Доставка и оплата</a></li>
                     <li><a href="">Калькулятор Сыродела</a></li>
@@ -107,131 +110,94 @@
         </section>
     </header>
     <main>
-        <section class="section-recommendations">
-            <div class="container container-recommendations">
-                <div class="cheese_making-box"><h2>Наборы для сыроделия</h2><p>Все что вам нужно для приготовления сыра
-                    в домашних условиях</p><div class="wraper-link_cheese_making"><a href="#" class="button">Смотреть наборы</a></div></div>
-                <div class="recepy-box"><p>Рецепты</p><h2>Сыры с плесенью</h2></div>
-                <div class="sales-box"><p>Акции</p><h2>закваски для сыра</h2></div>
+        <section class="section-breadcrums">
+            <div class="container container-breadcrums">
+                <ul class="wraper-breadcrums">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Ассортимент</a></li>
+                    <li><a href="#" class="title-card-page">Title</a></li>                  
+                </ul>
             </div>
         </section>
-        <section class="section-features">
-            <div  class="container container-features">
-                <div class="features-title">
-                    <h2>Наши преимущества</h2>
-                    <p>Мы лично отвечаем за качество товара и всегда 
-                        с радостью поможем Вам с выбором</p>
-                </div>
-                <div class="wrap-features">
-                    <img src="images/slicedCheese.png" alt="">
-                    <div class="ball-item award-wraper">+
-                        <div class="inner-text_ball"><img src="images/award.svg" alt=""><p>Наивысшее качество продукции</p></div>
+        <section class="section-catalog">
+            <div class="container container-catalog">
+                <div class="filter-wraper">
+                    <div class="ingredients-filter filter">
+                        <h2 class="title-filters"><img src="images/cheese 1.svg" alt=""> Ингредиенты</h2>
+                        <ul class="filtr-box">
+                            <li data-filter="chease" class="filters-class"><a href="catalog.html">Закваски для сыра</a></li>
+                            <li data-filter="ferment" class="filters-class"><a href="catalog.html">Ферменты для сыра</a></li>
+                            <li data-filter="mildew" class="filters-class"><a href="catalog.html">Плесень для сыра</a></li>
+                        </ul>
                     </div>
-                    <div class="ball-item percent-wraper">+
-                        <div class="inner-text_ball"><img src="images/percent.svg" alt=""><p>Наивысшее качество продукции</p></div>
+                    <div class="equipment-filter filter">
+                        <h2 class="title-filters"><img src="images/cereal-bowl 1.svg" alt=""> Оборудование</h2>
+                        <ul class="filtr-box">
+                            <li data-filter="chease"  class="filters-class"><a href="catalog.html">Формы для сыра</a></li>
+                            <li data-filter="ferment"  class="filters-class"><a href="catalog.html">Латексное покрытие</a></li>
+                            <li data-filter="mildew" class="filters-class"><a href="catalog.html">Воск для сыра</a></li>
+                        </ul>
                     </div>
-                    <div class="ball-item dolar-wraper">+
-                        <div class="inner-text_ball"><img src="images/dollar-sign.svg" alt=""><p>Наивысшее качество продукции</p></div>
                     </div>
-                    <div class="ball-item clock-wraper">+
-                        <div class="inner-text_ball"><img src="images/clock.svg" alt=""><p>Наивысшее качество продукции</p></div>
-                    </div>
-                    <div class="ball-item like-wraper">+
-                        <div class="inner-text_ball"><img src="images/Vector.svg" alt=""><p>Наивысшее качество продукции</p></div>
-                    </div>
-                </div>
-                <div class="wrap-feature_phone">
-                    <ul>
-                        <li><img src="images/award.svg" alt=""><p>Наивысшее качество продукции</p></li>
-                        <li><img src="images/percent.svg" alt=""><p>Наивысшее качество продукции</p></li>
-                        <li><img src="images/dollar-sign.svg" alt=""><p>Наивысшее качество продукции</p></li>
-                        <li><img src="images/clock.svg" alt=""><p>Наивысшее качество продукции</p></li>
-                        <li><img src="images/Vector.svg" alt=""><p>Наивысшее качество продукции</p></li>
-
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="section-selection">
-            <div class="container container-selection">
-                 <h2>Мы подобрали для вас</h2>
-                 <div class="selection-box">
-                    <div class="recipes">
-                        <div class="text-selection-box">
-                            <h3>более 1000 лучших рецептов</h3>
-                            <p>Мы собрали для Вас большую
-                                базу рецептов.</p>
+                    <div class="main-content-page">
+                        <div class="page-title">
+                            <h1 class="title-card-page"></h1>
                         </div>
-                        <div class="wraper-button_selection-box">
-                            <a href="#" class="button">Перейти</a>
+                        <div class="Card-blank">
+                            <div class="main-foto-page-blank">
+                                <div class="foto-page-blank">
+                                    <img src="images/Rectangle 65 (1).png" alt="">
+                                    <div class="wraper-inner_img">
+                                        <img src="images/Rectangle 65 (2).png" alt="">
+                                        <img src="images/Rectangle 65 (3).png" alt="">
+                                        <img src="images/Rectangle 65 (5).png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="info-page-blank">
+                                <h2>Цена: <span class="price"></span> грн</h2>
+                                <p>Артикул:<span class="article-blank"></span></p>
+                                <p>Производитель<span>:  Lactofarm ECO, Италия</span></p>
+                                <div class="wraper-btn_count_basket-blank">
+                                    <div class="add-basket-blank">
+                                        <div class="blank-count-item-card">
+                                            <button class="button-count">-</button>
+                                            <p>1</p>
+                                            <button class="button-count">+</button>
+                                        </div>
+                                            <button class="button blank-button" data-buy="add">В корзину</button>
+                                    </div>
+                                    <div class="delivery">
+                                    <h4>Стоимость доставки</h4>
+                                    <ul>
+                                        <li><p>Нова-почта</p><p>70-грн</p></li>
+                                        <li><p>Укр-почта</p><p>50-грн</p></li>
+                                        <li><p>Джастин</p><p>25-грн</p></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                                <ul class="feature-blank">
+                                    <li><img src="images/christmas-gift 1.svg" alt=""><p>Возвращаем 10% бонусами</p></li>
+                                    <li><img src="images/credit-cards.3 1.svg" alt=""><p>Удобные способы оплаты</p></li>
+                                    <li><img src="images/social-medias-rewards-rating-10 1.svg" alt=""><p>Гарантия качества</p></li>
+                                </ul>
+                            </div>                    
                         </div>
-                        <img class="img-recipes" src="images/img.png" alt="">
-                    </div>
-                    <div class="sets">
-                        <div class="text-selection-box">
-                            <h3>крутые Наборы для сыра</h3>
-                            <p>Готовые наборы сэкономят время, мы всё сделали за Вас. 
-                            </p>
-                        </div>
-                        <div class="wraper-button_selection-box">
-                            <a href="#" class="button">Перейти</a>
-                        </div>
-                        <img class="img-set" src="images/img-set.png" alt="">
-                    </div>
-                 </div>
-            </div>
-        </section>
-        <section class="section-equipment">
-            <div class="container container-equipment">
-                <h2>Прессы для сыра</h2>
-                <p>Прессы для сыра
-                    Пресс можно использовать для прессования твердых сыров.<br> Он разбирается, и вы можете компактно<br>его упаковать в коробку.</p>
-                    <div class="wraper-button_equipment">
-                        <a href="#" class="button">Узнать больше</a>
-                    </div>
-                    <img class="press-in_cheasebigOp" src="images/press-in_cheasebigOp.png" alt="">
-                    <img class="press-in_cheasebig" src="images/press-in_cheasebig.png" alt="">
-                    <img class="press-in_cheace" src="images/press-in_cheace.png" alt="">
-            </div>
-        </section>
-        <section class="section-article">
-            <div class="container container-article">
-                <div class="article">
-                    <div class="text_artticle">
-                        <div>
-                            <h2>Статьи про сыроделие</h2>
-                            <p>Мы собрали самые интересные  и полезные новости о акциях, скидках и мире сыроделия.</p>
-                        </div>
-                        <div class="wraper-button_article">
-                            <a href="#" class="button">Узнать больше</a>
+                        <div class="descriptions-blank-card">
+                            <h2>Описание</h2>
+                            <div class="descriptions">
+                                <p>P00802 Эта форма небольших размеров предназначена для получения маленьких головок сыра Рикотта и других мягких сыров в условиях домашнего или фермерского производства. Наличие хорошего дренажа обеспечивает ее использование для прессования сыров с плесенью, в том числе сорта Французский нешатель. Размер сырной головки, которую удается получить при использовании этой формы – до 80 г. Это аккуратный, готовый к подаче кусочек сыра, который не придется нарезать. Изготовлена форма из специального высококачественного пищевого пластика, который хорошо адаптирован к агрессивной молочнокислой среде.</p>
+                                <ul class="category-description">
+                                    <li><p class="category-description-title">Выход сыра</p><p>до 5-6 кг</p></li>
+                                    <li><p class="category-description-title">Материал</p><p>высококачественный пищевой пластик</p></li>
+                                    <li><p class="category-description-title">Наличие дна</p><p>есть</p></li>
+                                    <li><p class="category-description-title">Наличие ножек</p><p>нет</p></li>
+                                    <li><p class="category-description-title">Размеры</p><p>высота - 22 см, диаметр верха - 27 см</p></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="chease_plate box-article">
-                    <img src="images/chease_plate.png" alt="">
-                    <h3>Сырная тарелка</h3>
-                    <p>Так называется блюдо, которое состоит из разных сортов сыра. </p>
-                    <a class="link_next" href="">Читать далее </a>
-                </div>
-                <div class="cheace_hole box-article">
-                    <img src="images/cheace_hole.png" alt="">
-                    <h3>Откуда в сыре дырки?</h3>
-                    <p>Особенно характерно наличие дырочек разных размеров в структуре швейцарских сортов...</p>
-                    <a class="link_next" href="">Читать далее </a>
-                </div>
-                <div class="diet box-article">
-                    <img src="images/diet.png" alt="">
-                    <h3>Сырная диета</h3>
-                    <p>Из-за недостатка физической активности и стабильного переедания образуется лишний...</p>
-                    <a class="link_next" href="">Читать далее </a>
-                </div>
-                <div class="chease_head box-article">
-                    <img src="images/chease_head.png" alt="">
-                    <h3>посол сырной головки</h3>
-                    <p>Особенно характерно наличие дырочек разных размеров в структуре швейцарских сортов...</p>
-                    <a class="link_next" href="">Читать далее </a>
-                </div>
-            </div>
         </section>
         <section class="section-last-view">
             <div class="container container-last-view">
@@ -243,13 +209,8 @@
                     </div>
                 </div>
                 <ul class="slider-line">
-                    <!-- <li class="card">
-                        <img src="images/Rectangle 65 (1).png" alt="">  
-                        <p>Форма для твердого сыра 1 кг</p>  
-                        <div class="price-card"><p>130грн/ 1 шт.</p><a href="#" class="button">Добавить</a></div>
-                    </li> -->
                     
-                </ul>    
+                </ul>                
             </div>
         </section>
     </main>
@@ -314,8 +275,6 @@
     <div class="notification-add-goods"><h2><span class="title-notification-add-goods"></span> добавлен в корзину</h2></div>
     <script src="script/class-lastView.js"></script>
     <script src="script/main.js"></script>
-    <script src="script/index.js"></script>
+    <script src="script/blank.js"></script>
 </body>
 </html>
-
-<!-- <img src="images/award.svg" alt=""> -->
