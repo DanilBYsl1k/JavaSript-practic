@@ -2,6 +2,7 @@
     padding: 0;
     display: flex;
     font-family: 'Roboto';
+    align-items: center;
     a{
         color: rgb(165, 165, 165);
     }
@@ -31,6 +32,7 @@
 .container-catalog{
     display: grid;
     grid-template-columns:30% 70%;
+    height: 100%;
     overflow: hidden;
 }
 .filter{
@@ -79,6 +81,7 @@
     }
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .clear_all{
     width: 100%;
@@ -118,13 +121,13 @@
     font-weight: 1000;
     transform: translateX(1000%);
     transition: 0.2s ease;
-        #search{
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
-            outline: none;
-            position: relative;
-        }
+}
+.search{
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    position: relative;
 }
 .wraper-filters-line::after{
     position: absolute;

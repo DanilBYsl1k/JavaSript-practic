@@ -594,6 +594,18 @@ img {
   padding: 0;
 }
 
+.empty-last_wiev {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.empty-last_wiev h2 {
+  font-family: "Circe Rounded light";
+}
+.empty-last_wiev a {
+  text-align: center;
+}
+
 .card {
   border: 2px solid #E7E7E7;
   padding: 10px;
@@ -725,8 +737,6 @@ img {
 }
 
 .basket_empty {
-  margin: 0;
-  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -885,4 +895,8 @@ img {
 
 .active {
   display: block;
+}
+
+.active-flex {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

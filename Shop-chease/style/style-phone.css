@@ -4,6 +4,7 @@
 }
 
 .mobile-nav {
+  display: none;
   position: absolute;
   overflow: scroll;
   width: 100%;
@@ -13,6 +14,8 @@
   transition: 1s ease;
   transform: translateY(-140%);
   z-index: 2;
+  padding: 40px;
+  padding-top: 20px;
 }
 
 .wraper_nav-phone {
@@ -24,12 +27,10 @@
 .wraper_nav-phone a {
   width: 300px;
   color: black;
-  outline: 3px solid rgb(111, 0, 255);
   padding: 15px;
 }
 .wraper_nav-phone li {
   padding: 15px;
-  outline: 3px solid red;
   width: 100%;
   text-align: center;
 }
@@ -55,6 +56,12 @@
   margin: 0px 10px;
 }
 
+.search-phone {
+  border: 1px solid black;
+  margin: 10px 0;
+  display: none;
+}
+
 .header-city-phone {
   display: none;
 }
@@ -63,11 +70,16 @@
   transform: translateY(0%);
 }
 
+.search-phone {
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
 @media (max-width: 1250px) {
   .container {
     width: 1100px;
     margin: auto;
-    outline: 3px saddlebrown solid;
   }
   .features-wraper {
     justify-content: space-between;
@@ -92,11 +104,20 @@
   .messenger img {
     width: 20px;
   }
+  .number_phone {
+    font-size: 15px;
+  }
+  .list-cards {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .container-last-view {
+    width: 1035px;
+  }
 }
 @media (max-width: 1100px) {
   .container {
     width: 900px;
-    outline: 3px rgb(19, 139, 19) solid;
   }
   .award-wraper {
     top: 140px;
@@ -129,14 +150,25 @@
     right: 160px;
     width: 400px;
   }
+  .wraper-filters-line {
+    font-size: 12px;
+  }
+  .wraper-filters-line::after {
+    display: none;
+  }
   .feature {
     display: none;
+  }
+  .container-last-view {
+    width: 830px;
   }
 }
 @media (max-width: 900px) {
   .container {
     width: 750px;
-    outline: 3px rgb(139, 19, 103) solid;
+  }
+  .mobile-nav {
+    display: block;
   }
   .burger-menu_phone {
     display: block;
@@ -144,7 +176,7 @@
   .link-login {
     margin-right: 10px;
   }
-  .navigation_aside ul {
+  .navigation_aside nav {
     display: none;
   }
   .contact-social {
@@ -204,11 +236,16 @@
     right: 200px;
     width: 200px;
   }
+  .main-content-page {
+    margin-left: 10px;
+  }
+  .container-last-view {
+    width: 620px;
+  }
 }
 @media (max-width: 750px) {
   .container {
     width: 450px;
-    outline: 3px rgb(233, 129, 202) solid;
   }
   .container-recommendations .cheese_making-box {
     grid-area: 1/1/2/3;
@@ -254,25 +291,50 @@
   .container-footer nav div {
     margin: 0 10px;
   }
+  .container-catalog {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-content-page {
+    margin: 0;
+    justify-content: center;
+  }
+  .search {
+    width: 180px;
+    margin-left: 10px;
+  }
   .press-in_cheasebigOp {
     top: 220px;
     right: 20px;
     width: 150px;
   }
+  .filter-button {
+    height: 50px;
+  }
+  .Card-blank {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container-last-view {
+    width: 410px;
+  }
 }
 @media (max-width: 450px) {
   .container {
     width: 300px;
-    outline: 3px rgb(233, 129, 202) solid;
   }
   .header-city_navigatoin {
     display: none;
   }
   .navigation_aside {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
+    justify-content: space-between;
     height: 50px;
+  }
+  .link-login {
+    margin: 0;
+    padding: 0;
   }
   .container-recommendations {
     grid-template-columns: 1fr;
@@ -338,5 +400,28 @@
   }
   .press-in_cheasebigOp {
     display: none;
+  }
+  .page-title {
+    display: flex;
+    flex-direction: column;
+  }
+  .search {
+    display: none;
+  }
+  .search-phone {
+    display: block;
+    width: 100%;
+  }
+  .filter-button {
+    width: 100%;
+  }
+  .info-page-blank {
+    width: 100%;
+  }
+  .header-slider {
+    flex-direction: column;
+  }
+  .container-last-view {
+    width: 200px;
   }
 }/*# sourceMappingURL=style-phone.css.map */

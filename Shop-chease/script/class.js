@@ -34,6 +34,6 @@ class Catalogs{
 
 
 
-const aboba=new Catalogs()
+const CardsElemUl=new Catalogs()
 
-aboba.as()
+CardsElemUl.as()

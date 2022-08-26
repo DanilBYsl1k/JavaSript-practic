@@ -154,4 +154,14 @@
 }
 .category-description li .category-description-title {
   font-weight: 1000;
+}
+
+@media (max-width: 900px) {
+  .filter-wraper {
+    order: 2;
+  }
+  .container-catalog {
+    display: flex;
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=blank.css.map */

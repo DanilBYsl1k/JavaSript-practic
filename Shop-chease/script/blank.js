@@ -46,9 +46,22 @@ document.querySelector('.slider-move_right').addEventListener('click',function()
     if(count>=cardsSld.length){
         count=0
     }
-    console.log(count)
     rollSlider()
 })
 function rollSlider(){
     sliderLine.style.transform=`translate(-${count*209}px`
 }
+
+
+let btnAddBusk=document.querySelector('.blank-button')
+
+btnAddBusk.addEventListener('click',function(evt){  
+    let arrayItem={
+        name:CardBlank.name,
+        price:CardBlank.price,
+        img:CardBlank.img,
+        id:CardBlank.id,
+        count:document.querySelector('.count-blank_item').textContent
+    }
+    addBusketItem(arrayItem)
+})

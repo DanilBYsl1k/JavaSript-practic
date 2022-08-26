@@ -149,3 +149,15 @@
         }
     }
 }
+@media (max-width:900px){
+    .filter-wraper{
+        order:+2;
+    }
+    .container-catalog{
+        display: flex;
+        flex-direction: column;
+    }
+    // .Card-blank{
+    //     display: ;
+    // }
+}

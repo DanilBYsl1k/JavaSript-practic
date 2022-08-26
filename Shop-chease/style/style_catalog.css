@@ -2,6 +2,7 @@
   padding: 0;
   display: flex;
   font-family: "Roboto";
+  align-items: center;
 }
 .wraper-breadcrums a {
   color: rgb(165, 165, 165);
@@ -33,6 +34,7 @@
 .container-catalog {
   display: grid;
   grid-template-columns: 30% 70%;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -78,6 +80,7 @@
   font-size: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .page-title h1 {
   margin: 10px 0;
@@ -126,7 +129,8 @@
   transform: translateX(1000%);
   transition: 0.2s ease;
 }
-.wraper-filters-line #search {
+
+.search {
   border: none;
   border-radius: 5px;
   padding: 10px;

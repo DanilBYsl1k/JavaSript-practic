@@ -16,7 +16,6 @@ window.addEventListener('click',function(btn){
     let counter;
     if(btn.target.dataset.buy==='plus' || btn.target.dataset.buy==='minus'){
         const counterWrapper=btn.target.closest('.counter-item-list')
-
         counter=counterWrapper.querySelector('[data-count]');
     }
     if(btn.target.dataset.buy==="plus"){
@@ -26,7 +25,6 @@ window.addEventListener('click',function(btn){
     if(btn.target.dataset.buy==="minus"){
         if (parseInt(counter.innerText)>0) {
             counter.innerText=--counter.innerText
-
         }
         if (btn.target.closest('.basket_cards') && parseInt(counter.innerText)===0){
             btn.target.closest('.busket-cards_item').remove()
@@ -42,55 +40,124 @@ window.addEventListener('click',function(delt){
         priceItem()
     }
 })
-
-
+let arrayLocalstorage=[]
+if(localStorage.getItem('cardBusket')){
+    arrayLocalstorage=JSON.parse(localStorage.getItem('cardBusket'))
+    // for (const key in arrayLocalstorage) { 
+    //     const IdCards=wraperBasket.querySelector(`[data-id="${arrayLocalstorage[key].id}"]`)
+    //     if(IdCards){
+    //         let counterElemnt=IdCards.querySelector('[data-count]')
+    //         counterElemnt.innerHTML=parseInt(counterElemnt.innerHTML)+parseInt(item.count)
+    //     }
+    //     else{
+    //         let itemCard=
+    //         `
+    //                 <img src="${arrayLocalstorage[key].img}" alt="">
+    //                 <div class="change-card_basket">
+    //                     <div class="info-title">
+    //                         <h3>${arrayLocalstorage[key].name}</h3><img data-delete src="images/delete-item.svg" alt="">
+    //                     </div>
+    //                     <div class="wraper-btn_count_basket">
+    //                         <div class="counter-item-list">
+    //                         <button class="btn-busket" data-buy="minus">-</button><p class="inner-count_item" data-count>${arrayLocalstorage[key].count}</p><button data-buy="plus" class="btn-busket">+</button></div><h4 class="price-Item_basket">${arrayLocalstorage[key].price}<span>грн</span></h4>
+    //                     </div>
+    //                 </div>
+    //         `
+    //         let htmlItem=document.createElement('li')
+    //         htmlItem.innerHTML=itemCard
+    //         htmlItem.classList.add('busket-cards_item')
+    //         htmlItem.setAttribute('data-id',arrayLocalstorage[key].id)
+    //         document.querySelector('.basket_cards').insertAdjacentElement('afterbegin',htmlItem)
+    //         console.log(arrayLocalstorage[key].id)
+    //     }
+    // }
+    // callItem()
+    // priceItem()
+}
 window.addEventListener('click',function(evt){
     if(evt.target.dataset.buy==='add'){
         let CardInfo=evt.target.closest('.card')
+
         let productInfo={
             id:CardInfo.dataset.id,
             price:CardInfo.dataset.price,
             name:CardInfo.querySelector('.title-card').textContent,
-            img:CardInfo.querySelector('img').getAttribute('src')
+            img:CardInfo.querySelector('img').getAttribute('src'),
+            count:1
         }
-        const IdCards=wraperBasket.querySelector(`[data-id="${productInfo.id}"]`)
-        console.log(IdCards)
-        if(IdCards){
-            let counterElemnt=IdCards.querySelector('[data-count]')
-            counterElemnt.innerHTML=parseInt(counterElemnt.innerHTML)+parseInt(+1)
+        addBusketItem(productInfo)
+        console.log(evt.target.closest('.card').dataset)
+
+        // let newId=parseInt(productInfo.id)+parseInt(productInfo.id)
+        // console.log(newId)
+        // console.log(arrayLocalstorage[productInfo.id-1])
+        if(arrayLocalstorage[productInfo.id-1]!==undefined){
+            // console.log(undefined)
+            
+            let a=parseInt(arrayLocalstorage[productInfo.id-1].id)+1
+            // arrayLocalstorage[productInfo.id-1].splice(1,1)
+            console.log(arrayLocalstorage)
+
+            console.log(a)
+
+            // console.log(arrayLocalstorage[productInfo.id-1].count+1)
+            // arrayLocalstorage[productInfo.id-1]
+            localStorage.setItem('cardBusket',JSON.stringify(arrayLocalstorage))
+            console.log('dobav')
+
         }
         else{
-            let itemCard=
-            `
-                    <img src="${productInfo.img}" alt="">
-                    <div class="change-card_basket">
-                        <div class="info-title">
-                            <h3>${productInfo.name}</h3><img data-delete src="images/delete-item.svg" alt="">
-                        </div>
-                        <div class="wraper-btn_count_basket">
-                            <div class="counter-item-list">
-                            <button class="btn-busket" data-buy="minus">-</button><p class="inner-count_item" data-count>1</p><button data-buy="plus" class="btn-busket">+</button></div><h4 class="price-Item_basket">${productInfo.price}<span>грн</span></h4>
-                        </div>
-                    </div>
-            `
-            let htmlItem=document.createElement('li')
-            htmlItem.innerHTML=itemCard
-            htmlItem.classList.add('busket-cards_item')
-            htmlItem.setAttribute('data-id',productInfo.id)
-            document.querySelector('.basket_cards').insertAdjacentElement('afterbegin',htmlItem)
+            console.log('bachu')
+            arrayLocalstorage.push(productInfo)
+            localStorage.setItem('cardBusket',JSON.stringify(arrayLocalstorage))
         }
-        //add notification add goods
-        let titleGoods=document.querySelector('.title-notification-add-goods')
-        titleGoods.innerText=productInfo.name
-        let alert=document.querySelector('.notification-add-goods')
-        alert.classList.add('active')
-        setInterval(function(){
-            alert.classList.remove('active')
-        },2000)
-        callItem()
-        priceItem()
     }
 })
+
+function addBusketItem(item){
+    const IdCards=wraperBasket.querySelector(`[data-id="${item.id}"]`)
+    // console.log(IdCards)
+    if(IdCards){
+        let counterElemnt=IdCards.querySelector('[data-count]')
+        counterElemnt.innerHTML=parseInt(counterElemnt.innerHTML)+parseInt(item.count)
+
+    }
+    else{
+        let itemCard=
+        `
+                <img src="${item.img}" alt="">
+                <div class="change-card_basket">
+                    <div class="info-title">
+                        <h3>${item.name}</h3><img data-delete src="images/delete-item.svg" alt="">
+                    </div>
+                    <div class="wraper-btn_count_basket">
+                        <div class="counter-item-list">
+                        <button class="btn-busket" data-buy="minus">-</button><p class="inner-count_item" data-count>${item.count}</p><button data-buy="plus" class="btn-busket">+</button></div><h4 class="price-Item_basket">${item.price}<span>грн</span></h4>
+                    </div>
+                </div>
+        `
+        let htmlItem=document.createElement('li')
+        htmlItem.innerHTML=itemCard
+        htmlItem.classList.add('busket-cards_item')
+        htmlItem.setAttribute('data-id',item.id)
+        document.querySelector('.basket_cards').insertAdjacentElement('afterbegin',htmlItem)
+        ///
+        // arrayLocalstorage.push(item)
+        // localStorage.setItem('cardBusket',JSON.stringify(arrayLocalstorage))
+        ///
+    }
+
+    //add notification add goods
+    let titleGoods=document.querySelector('.title-notification-add-goods')
+    titleGoods.innerText=item.name
+    let alert=document.querySelector('.notification-add-goods')
+    alert.classList.add('active')
+    setInterval(function(){
+        alert.classList.remove('active')
+    },2000)
+    callItem()
+    priceItem()
+}
 
 function priceItem(){
     const cartItem=document.querySelectorAll('.busket-cards_item');
@@ -167,20 +234,27 @@ let lastView=[]
 if(sessionStorage.getItem('SaveItems')){
     let a=sessionStorage.getItem('SaveItems')
     lastView=JSON.parse(a)
-    console.log(lastView)
+    document.querySelector('.empty-last_wiev').classList.add('hide')
+}
+else{
+    document.querySelector('.empty-last_wiev').classList.add('active-flex')
 }
 
 
 function saveSesionstr(item, evtTarg){
     let targt=evtTarg.target.closest('li').dataset.id
-    for (const key in lastView) {
+    for(const key in lastView) {
         console.log(lastView[key].id.includes(targt))
         if(lastView[key].id.includes(targt)){
-            console.log('Nashlo')
             return
         }
     }
-    console.log(lastView)
     lastView.push(item)
     sessionStorage.setItem('SaveItems', JSON.stringify(lastView ))
 }
+
+
+// function LocalSave(){
+//     let 
+//     console.log('a')
+// }

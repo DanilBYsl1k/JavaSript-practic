@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/style-phone.css">
     <link rel="stylesheet" href="style/style_catalog.css">
     <link rel="stylesheet" href="style/blank.css">
+    <link rel="stylesheet" href="style/style-phone.css">
     <link rel="shortcut icon" href="images/CheaseLogo.svg" type="image/x-icon">
     <title>Cыроварение</title>
 </head>
@@ -88,14 +88,16 @@
             </div>
             <div class="phone-call">
                 <div class="number_phone">
+                    <!-- <form action="">-->
                     <p>+38 228 666-14-88</p>
                     <button><img src="images/phonesCall.svg" alt=""> Заказать звонок</button>
+                    <!-- </form> -->
                 </div>
             </div>
             <nav class="nav-phone">
                 <ul class="wraper_nav-phone">
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="">Рецепты</a></li>
+                    <li><a href="catalog.html">Ассортимент</a></li>
                     <li><a href="">Доставка и оплата</a></li>
                     <li><a href="">Калькулятор Сыродела</a></li>
                     <li><a href="">Отзывы</a></li>
@@ -106,7 +108,6 @@
                     <li><a href="">Акционные товары</a></li>
                 </ul>
             </nav>
-            
         </section>
     </header>
     <main>
@@ -138,8 +139,8 @@
                             <li data-filter="mildew" class="filters-class"><a href="catalog.html">Воск для сыра</a></li>
                         </ul>
                     </div>
-                    </div>
-                    <div class="main-content-page">
+                </div>
+                <div class="main-content-page">
                         <div class="page-title">
                             <h1 class="title-card-page"></h1>
                         </div>
@@ -160,12 +161,12 @@
                                 <p>Производитель<span>:  Lactofarm ECO, Италия</span></p>
                                 <div class="wraper-btn_count_basket-blank">
                                     <div class="add-basket-blank">
-                                        <div class="blank-count-item-card">
-                                            <button class="button-count">-</button>
-                                            <p>1</p>
-                                            <button class="button-count">+</button>
-                                        </div>
-                                            <button class="button blank-button" data-buy="add">В корзину</button>
+                                    <div class="blank-count-item-card counter-item-list">
+                                        <button class="button-count" data-buy="minus">-</button>
+                                        <p class="count-blank_item" data-count>1</p>
+                                        <button class="button-count" data-buy="plus">+</button>
+                                    </div>
+                                    <button class="button blank-button" data-buy_blank="add">В корзину</button>
                                     </div>
                                     <div class="delivery">
                                     <h4>Стоимость доставки</h4>
@@ -196,8 +197,8 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
                 </div>
+            </div>
         </section>
         <section class="section-last-view">
             <div class="container container-last-view">
@@ -209,7 +210,10 @@
                     </div>
                 </div>
                 <ul class="slider-line">
-                    
+                    <div class="empty-last_wiev">
+                        <h2>Вы ещё ничего не просмотрели</h2>  
+                        <a href="catalog.html" class="button">Посмотреть</a>
+                    </div>
                 </ul>                
             </div>
         </section>

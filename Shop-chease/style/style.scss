@@ -538,6 +538,17 @@ img{
     width: 100%;
     padding: 0;
 }
+.empty-last_wiev{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    h2{
+        font-family: 'Circe Rounded light';
+    }
+    a{
+        text-align: center;
+    }
+}
 .card{
     // outline: 3px solid black;
     border: 2px solid #E7E7E7;
@@ -666,8 +677,7 @@ img{
     }
 }
 .basket_empty{
-    margin: 0;
-    height: 20px;
+    // height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -820,4 +830,6 @@ img{
 .active{
     display: block;
 }
-
+.active-flex{
+    display: flex;
+}

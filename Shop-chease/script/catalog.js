@@ -44,10 +44,17 @@ function insertAfter(elem, refElem){
 }
 
 
-let search=document.querySelector('#search')
+let search=document.querySelector('.search')
+let searchPhone=document.querySelector('.search-phone')
 
+searchPhone.addEventListener('input',function(){
+    filtrSearch(searchPhone)
+})
 search.addEventListener('input',function(){
-    let Val=search.value
+        filtrSearch(search)
+    })
+function filtrSearch(input){
+    let Val=input.value
     let cards=document.querySelectorAll('.cards-wraper li')
     if(Val!=''){
         cards.forEach(function(elem){
@@ -64,7 +71,7 @@ search.addEventListener('input',function(){
             elems.classList.remove('hide')
         })
     }
-})
+}
 
 
 const filterBox=document.querySelectorAll('.card')
