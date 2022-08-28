@@ -1,0 +1,427 @@
+.burger-menu_phone {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;
+  position: absolute;
+  overflow: scroll;
+  width: 100%;
+  background-color: #faf8f2;
+  height: 100vh;
+  top: 50px;
+  transition: 1s ease;
+  transform: translateY(-140%);
+  z-index: 2;
+  padding: 40px;
+  padding-top: 20px;
+}
+
+.wraper_nav-phone {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.wraper_nav-phone a {
+  width: 300px;
+  color: black;
+  padding: 15px;
+}
+.wraper_nav-phone li {
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.wrap-feature_phone {
+  display: none;
+}
+.wrap-feature_phone ul {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+.wrap-feature_phone ul li {
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  border: 2px solid #FD9339;
+  margin: 10px;
+  border-radius: 10px;
+}
+.wrap-feature_phone ul img {
+  width: 30px;
+  margin: 0px 10px;
+}
+
+.search-phone {
+  border: 1px solid black;
+  margin: 10px 0;
+  display: none;
+}
+
+.header-city-phone {
+  display: none;
+}
+
+.mobile-nav_active {
+  transform: translateY(0%);
+}
+
+.search-phone {
+  border-radius: 15px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+@media (max-width: 1250px) {
+  .container {
+    width: 1100px;
+    margin: auto;
+  }
+  .features-wraper {
+    justify-content: space-between;
+  }
+  .logo-text {
+    width: 180px;
+  }
+  .feature {
+    width: 400px;
+  }
+  .feature p {
+    width: 80px;
+    font-size: 11px;
+  }
+  .container-equipment p {
+    width: 350px;
+  }
+  .contact-social {
+    padding: 0;
+    padding-right: 10px;
+  }
+  .messenger img {
+    width: 20px;
+  }
+  .number_phone {
+    font-size: 15px;
+  }
+  .list-cards {
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .container-last-view {
+    width: 1035px;
+  }
+}
+@media (max-width: 1100px) {
+  .container {
+    width: 900px;
+  }
+  .award-wraper {
+    top: 140px;
+    left: 80px;
+  }
+  .percent-wraper {
+    bottom: 40px;
+    left: 30px;
+  }
+  .clock-wraper {
+    top: 120px;
+    left: 200px;
+  }
+  .dolar-wraper {
+    top: 230px;
+    left: 200px;
+  }
+  .like-wraper {
+    top: 200px;
+    left: 300px;
+  }
+  .navigation_aside ul li {
+    font-size: 13px;
+  }
+  .wraper-button_selection-box {
+    margin-top: 130px;
+  }
+  .press-in_cheasebigOp {
+    top: 0;
+    right: 160px;
+    width: 400px;
+  }
+  .wraper-filters-line {
+    font-size: 12px;
+  }
+  .wraper-filters-line::after {
+    display: none;
+  }
+  .feature {
+    display: none;
+  }
+  .container-last-view {
+    width: 830px;
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    width: 750px;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  .burger-menu_phone {
+    display: block;
+  }
+  .link-login {
+    margin-right: 10px;
+  }
+  .navigation_aside nav {
+    display: none;
+  }
+  .contact-social {
+    padding-right: 30px;
+    padding-left: 15px;
+    border-right: 1px solid #F4F0E6;
+  }
+  .messenger {
+    padding: 0;
+    height: 35px;
+    padding: 5px;
+    align-items: center;
+  }
+  .messenger li {
+    margin: 0 5px;
+  }
+  .section-navigation {
+    display: none;
+  }
+  .wrap-features {
+    display: none;
+  }
+  .container-features {
+    flex-direction: column;
+  }
+  .wrap-feature_phone {
+    display: block;
+  }
+  .img-set {
+    position: absolute;
+    width: 300px;
+    bottom: 10px;
+    right: 0;
+  }
+  .img-recipes {
+    position: absolute;
+    width: 300px;
+    bottom: -10px;
+    right: 0;
+  }
+  .selection-box {
+    flex-direction: column;
+  }
+  .press-in_cheace {
+    bottom: 0;
+    right: 0;
+    width: 400px;
+  }
+  .press-in_cheasebig {
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 340px;
+  }
+  .press-in_cheasebigOp {
+    top: 0px;
+    right: 200px;
+    width: 200px;
+  }
+  .main-content-page {
+    margin-left: 10px;
+  }
+  .container-last-view {
+    width: 620px;
+  }
+}
+@media (max-width: 750px) {
+  .container {
+    width: 450px;
+  }
+  .container-recommendations .cheese_making-box {
+    grid-area: 1/1/2/3;
+    width: 450px;
+  }
+  .container-recommendations .recepy-box {
+    grid-area: 2/1/3/2;
+    width: 243px;
+  }
+  .container-recommendations .sales-box {
+    grid-area: 2/2/3/3;
+    width: 205px;
+  }
+  .contact-social {
+    display: none;
+  }
+  .phone-call {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  .features-title h2 {
+    font-size: 40px;
+  }
+  .press-in_cheace {
+    bottom: 0;
+    right: 0;
+    width: 150px;
+  }
+  .press-in_cheasebig {
+    bottom: 0;
+    right: 0;
+    top: 0;
+    width: 240px;
+    display: none;
+  }
+  .container-article {
+    grid-template-areas: "article chease_plate " "article cheace_hole" "diet chease_head";
+  }
+  .container-footer {
+    flex-direction: column;
+  }
+  .container-footer nav div {
+    margin: 0 10px;
+  }
+  .container-catalog {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-content-page {
+    margin: 0;
+    justify-content: center;
+  }
+  .search {
+    width: 180px;
+    margin-left: 10px;
+  }
+  .press-in_cheasebigOp {
+    top: 220px;
+    right: 20px;
+    width: 150px;
+  }
+  .filter-button {
+    height: 50px;
+  }
+  .Card-blank {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container-last-view {
+    width: 410px;
+  }
+}
+@media (max-width: 450px) {
+  .container {
+    width: 300px;
+  }
+  .header-city_navigatoin {
+    display: none;
+  }
+  .navigation_aside {
+    width: 100%;
+    justify-content: space-between;
+    height: 50px;
+  }
+  .link-login {
+    margin: 0;
+    padding: 0;
+  }
+  .container-recommendations {
+    grid-template-columns: 1fr;
+  }
+  .container-recommendations .cheese_making-box {
+    grid-area: 1/1/1/3;
+    width: 100%;
+    height: 300px;
+  }
+  .container-recommendations .wraper-link_cheese_making {
+    margin-top: 70px;
+  }
+  .container-recommendations .recepy-box {
+    grid-area: 2/1/3/2;
+    width: 100%;
+  }
+  .container-recommendations .sales-box {
+    grid-area: 3/1/3/2;
+    width: 100%;
+  }
+  .features-wraper {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-city-phone {
+    display: flex;
+    justify-content: space-between;
+  }
+  .img-set {
+    position: absolute;
+    width: 170px;
+    bottom: 10px;
+    right: 0;
+  }
+  .img-recipes {
+    position: absolute;
+    width: 170px;
+    bottom: -10px;
+    right: 0;
+  }
+  .wraper-button_selection-box {
+    margin-top: 20px;
+  }
+  .container-equipment {
+    height: 100%;
+  }
+  .container-equipment p {
+    width: 100%;
+  }
+  .press-in_cheace {
+    bottom: 0;
+    right: 0;
+    width: 100px;
+  }
+  .wraper-button_equipment {
+    margin-top: 15px;
+  }
+  .container-article {
+    grid-template-areas: "article" "chease_plate" "cheace_hole" "diet" "chease_head";
+  }
+  .container-equipment {
+    padding: 20px;
+  }
+  .press-in_cheasebigOp {
+    display: none;
+  }
+  .page-title {
+    display: flex;
+    flex-direction: column;
+  }
+  .search {
+    display: none;
+  }
+  .search-phone {
+    display: block;
+    width: 100%;
+  }
+  .filter-button {
+    width: 100%;
+  }
+  .info-page-blank {
+    width: 100%;
+  }
+  .header-slider {
+    flex-direction: column;
+  }
+  .container-last-view {
+    width: 200px;
+  }
+}/*# sourceMappingURL=style-phone.css.map */
