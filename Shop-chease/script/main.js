@@ -1,7 +1,6 @@
-let burgerMenu=document.querySelector('.burger-menu_phone')
-
-let modalBasket=document.querySelector('.modal-basket');
-let basketLink=document.querySelector('.link-basket')
+const burgerMenu=document.querySelector('.burger-menu_phone')
+const modalBasket=document.querySelector('.modal-basket');
+const basketLink=document.querySelector('.link-basket')
 
 basketLink.addEventListener('click',function(){
     modalBasket.classList.toggle('active')
@@ -9,7 +8,7 @@ basketLink.addEventListener('click',function(){
 
 
 
-let wraperBasket=document.querySelector('.basket_cards')
+const wraperBasket=document.querySelector('.basket_cards')
 
 let saveBusk=[]
 
@@ -57,8 +56,6 @@ window.addEventListener('click',function(delt){
     }
 })
 
-
-
 window.addEventListener('click',function(evt){
     if(evt.target.dataset.buy==='add'){
         let CardInfo=evt.target.closest('.card')
@@ -73,9 +70,6 @@ window.addEventListener('click',function(evt){
         localStorageSave.Localstr(productInfo,evt)
     }
 })
-
-
-
 function CreateBSKT(item){
     let itemCard=
         `
@@ -101,7 +95,6 @@ function CreateBSKT(item){
         document.querySelector('.basket_cards').insertAdjacentElement('afterbegin',htmlItem)
 }
 
-
 function addBusketItem(item){
     const IdCards=wraperBasket.querySelector(`[data-id="${item.id}"]`)
     console.log('asas')
@@ -112,8 +105,6 @@ function addBusketItem(item){
     else{
         CreateBSKT(item)
     }
-
-    //add notification add goods
     let titleGoods=document.querySelector('.title-notification-add-goods')
     titleGoods.innerText=item.name
     let alert=document.querySelector('.notification-add-goods')
@@ -133,9 +124,7 @@ function priceItem(){
     cartItem.forEach(function (item) {
         const amountEL=item.querySelector('[data-count]');
         const priceEL=item.querySelector('.price-Item_basket');
-
         const currentPrice=parseInt(amountEL.innerText)*parseInt(priceEL.innerText)
-
         totalPrice+=currentPrice
     })
     innerPrice.forEach(function(price){
@@ -165,7 +154,7 @@ burgerMenu.addEventListener('click',function(){
 })
 
 
-let scrollBtn=document.querySelector('.scroll-btn')
+const scrollBtn=document.querySelector('.scroll-btn')
 window.addEventListener('scroll',function(){
     if(window.scrollY<700){
         scrollBtn.classList.remove('active-scroll-btn')
@@ -179,7 +168,6 @@ scrollBtn.addEventListener('click',function(){
 })
 
 window.addEventListener('click',function(evt){
-    // evt.preventDefault()
     if(evt.target.classList.contains('link-card')){
         let CardInfo=evt.target.closest('.card')
         let productInfo={
@@ -194,17 +182,111 @@ window.addEventListener('click',function(evt){
 })
 
 
+const linkLogin=document.querySelectorAll('.link-login')
+const popapLogin=document.querySelector('.modal-login')
+const popapRegistration=document.querySelector('.modal-registration')
+
+const bgc=document.querySelector('.overlay')
+
+const btnRegistration=document.querySelector('.registration')
+const btnSendForm=document.querySelectorAll('.btnSendForm')
+const btnRegForm=document.querySelector('#button-form_modal-reg')
+
+let InpName=document.querySelector('#reg_name')
+let InpMail=document.querySelector('#reg_mail')
+let InpPassword=document.querySelector('#reg-password')
+let InpRepitPasw=document.querySelector('#repit-reg-password')
+
+let checkBox=document.querySelector('#politic-conf')
+
+
+
+btnRegForm.addEventListener('click',function(){
+    if(InpName.value.length<6){
+        InpName.previousElementSibling.children[0].classList.add('active')
+        return
+    }
+    else{
+        InpName.previousElementSibling.children[0].classList.remove('active')
+    }
+    let gmail='@gmail.com'
+    if(InpMail.value.indexOf(gmail)===-1){
+        InpMail.previousElementSibling.children[0].classList.add('active')
+        return
+    }
+    else{
+        InpMail.previousElementSibling.children[0].classList.remove('active')
+    }
+    if(InpPassword.value.length<6){
+        InpPassword.previousElementSibling.children[0].classList.add('active')
+        return
+    }
+    else{
+        InpPassword.previousElementSibling.children[0].classList.remove('active')
+    }
+    if(InpRepitPasw.value!==InpPassword.value){
+        InpRepitPasw.previousElementSibling.children[0].classList.add('active')
+        return
+    }
+    else{
+        InpRepitPasw.previousElementSibling.children[0].classList.remove('active')
+    }
+    if(checkBox.checked===false){
+        checkBox.nextElementSibling.children[1].classList.add('active')
+        return
+    }
+    else{
+        checkBox.nextElementSibling.children[1].classList.remove('active')
+    }
+////отправка форми на сервер должна буть 
+})
+
+
+bgc.addEventListener('click',function(){
+    popapLogin.classList.remove('active')
+    bgc.classList.remove('active')
+    popapRegistration.classList.remove('active')
+})
+linkLogin.forEach(function(element){
+    element.addEventListener('click',function(evt){
+        evt.preventDefault()
+        popapRegistration.classList.remove('active')
+        popapLogin.classList.add('active')
+        bgc.classList.add('active')
+    })
+})
+
+btnRegistration.addEventListener('click',function(evt){
+    evt.preventDefault()
+    popapRegistration.classList.add('active')
+    popapLogin.classList.remove('active')
+})
+
+
+
+btnSendForm.forEach(function(btn){
+    btn.addEventListener('click',function(evt){
+        evt.preventDefault()
+    })
+})
 
 /////////////последнее просмотренно 
 let lastView=[]
-if(sessionStorage.getItem('SaveItems')){
-    let a=sessionStorage.getItem('SaveItems')
-    lastView=JSON.parse(a)
-    document.querySelector('.empty-last_wiev').classList.add('hide')
+try {
+    if(sessionStorage.getItem('SaveItems')){
+        let a=sessionStorage.getItem('SaveItems')
+        lastView=JSON.parse(a)
+        document.querySelector('.empty-last_wiev').classList.add('hide')
+    }
+    else{
+        document.querySelector('.empty-last_wiev').classList.add('active-flex')
+    }
+} 
+catch (error) {
+    // return    
 }
-else{
-    document.querySelector('.empty-last_wiev').classList.add('active-flex')
-}
+
+
 
 
 function saveSesionstr(item, evtTarg){
@@ -218,9 +300,3 @@ function saveSesionstr(item, evtTarg){
     lastView.push(item)
     sessionStorage.setItem('SaveItems', JSON.stringify(lastView ))
 }
-
-
-// function LocalSave(){
-//     let 
-//     console.log('a')
-// }

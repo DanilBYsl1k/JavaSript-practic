@@ -9,7 +9,6 @@ balls.forEach(function(element){
         element.lastElementChild.classList.add('active-ball')
     })
 })
-// console.log(balls)
 document.addEventListener('click',function(trg){
     balls.forEach(function(elem){
         if(trg.target!==elem){

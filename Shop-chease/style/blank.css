@@ -156,6 +156,13 @@
   font-weight: 1000;
 }
 
+.fail-page {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 900px) {
   .filter-wraper {
     order: 2;

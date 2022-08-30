@@ -260,6 +260,45 @@
             </div>
         </section>
     </footer>
+    <div class="modal modal-login">
+        <h2>Вход в аккаунт</h2>
+        <form class="form-modal form_modal-login" action="">
+            <label for="login_mail">Email адрес:</label>
+            <input class="modal-input" type="text" name="login_mail" id="login_mail" placeholder="yourname@mail.com">
+            <label for="password">Пароль</label>
+            <input class="modal-input" type="password" name="password" id="password"placeholder="Ваш пароль">
+            <button class="button btnSendForm" id="button-form_modal-login">Войти</button>
+        </form>
+            <div class="restoration-password">
+                <a href="">Забыли пароль?</a>
+                <p>У вас нет профиля?<a href="" class="registration">Создайте аккаунт</a></p>
+            </div>
+    </div>
+    <div class="modal modal-registration">
+        <h2>Регистрация</h2>
+        <form class="form-modal form_modal-reg" action="">
+            <label for="reg_name">Ваше имя:<span class="alert">Обязательно*</span></label>
+            <input class="modal-input" type="text" name="reg_name" id="reg_name" placeholder="Джунгме Ван Чук">
+            <label for="reg_mail">Email адрес:<span class="alert">Обязательно*</span></label>
+            <input class="modal-input" type="text" name="reg_mail" id="reg_mail" placeholder="yourname@mail.com">
+            <label for="reg-password">Пароль<span class="alert">Обязательно*</span></label>
+            <input class="modal-input" type="password" name="reg-password" id="reg-password"placeholder="Ваш пароль">
+            <label for="repit-reg-password">Повторите пароль<span class="alert">Обязательно*</span></label>
+            <input class="modal-input" type="password" name="repit-reg-password" id="repit-reg-password"placeholder="Повторите пароль">
+            <div class="checbox_modal-registration">
+                <input class="checkForm" type="checkbox" id="mailing -salle">
+                <label  for="mailing -salle">Получать письма с новостями и акциями</label>
+            </div>
+            <div class="checbox_modal-registration">
+                <input class="checkForm" type="checkbox" id="politic-conf">
+                <label for="politic-conf">Я прочитал и соглашаюсь с условиями <a href="">Политики конфиденциальности</a><span class="alert">Обязательно*</span></label>
+            </div>
+            <button class="button btnSendForm" id="button-form_modal-reg">Создать аккаунт</button>
+        </form>
+            <div class="restoration-password">
+                <p>У вас есть профиль?<a href="" class="link-login">Войти в аккаунт</a></p>
+            </div>
+    </div>
     <div class="modal-basket">
         <h2>Корзина <span class="count-item"></span></h2>
         <h2 class="basket_empty">Корзина пуста</h2>
@@ -277,8 +316,8 @@
         <div class="swipe-up"></div>
     </div>
     <div class="notification-add-goods"><h2><span class="title-notification-add-goods"></span> добавлен в корзину</h2></div>
-    <script src="script/class-lastView.js"></script>
-    <script src="script/LocalStorageUtil.js"></script>
+    <script src="Class/class-lastView.js"></script>
+    <script src="Class/LocalStorageUtil.js"></script>
     <script src="script/main.js"></script>
     <script src="script/blank.js"></script>
 </body>

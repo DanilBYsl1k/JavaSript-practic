@@ -4,7 +4,11 @@ let a=localStorage.getItem('Card')
 
 let CardBlank=JSON.parse(a)
 
-function CreateBlank(){
+if(CardBlank===null){
+    console.log('a')
+    document.querySelector('.main-content-page').innerHTML=`<div class="fail-page"><h2>Произошла ошибка попробуйте найти товар через каталог</h2></div>`
+}
+else{
     document.querySelector('.price').innerText=CardBlank.price
     document.querySelector('h1').innerText=CardBlank.name
     document.querySelector('.article-blank').innerText=' '+CardBlank.id
@@ -12,9 +16,9 @@ function CreateBlank(){
     document.querySelectorAll('.main-foto-page-blank img').forEach(function(Element){
         Element.src=CardBlank.img
     })
-
 }
-CreateBlank()
+console.log(CardBlank)
+
 
 
 const cardsSld=document.querySelectorAll('.card')

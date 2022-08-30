@@ -24,19 +24,29 @@ body{
     margin: 0;
     background-color: #faf8f2;
 }
-// .overlay {
-//     position: absolute;
-//     // left: 0; 
-//     right: 0; 
-//     top: 0; 
-//     // bottom: 0;
-//     width: 1000px;
-//     height: 1000px;
-//     background: black;
-//     opacity: 0.7;
-//     z-index: 2;
-//     display: block;
-//   }
+h2{
+    font-family: 'Circe Rounded regular';
+}
+h3{
+    font-family: 'Circe Rounded regular';
+}
+h4{
+    font-family: 'Circe Rounded regular';
+}
+h5{
+    font-family: 'Circe Rounded regular';
+}
+.overlay {
+    position: fixed;
+    right: 0; 
+    top: 0; 
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.7;
+    z-index: 5;
+    display: none;
+}
 .block-page{
     overflow: hidden;
 }
@@ -232,7 +242,6 @@ body{
     background-repeat: no-repeat;
     color: rgb(255, 255, 255);
     h2{
-        font-family: 'Circe Rounded regular';
         font-size: 30px;
         margin: 5px;
     }
@@ -287,7 +296,6 @@ body{
 }
 .features-title{
     h2{
-        font-family: 'Circe Rounded regular';
         font-size: 70px; 
         margin: 0;
     }
@@ -362,13 +370,12 @@ img{
 }
 .container-selection{
     h2{
-        font-family: 'Circe Rounded regular';
         font-size: 30px;
         color: #4E2D2D;
     }
     h3{
         text-transform: uppercase;
-        font-family: 'Circe Rounded regular';
+
         font-size: 30px
     }
 }
@@ -440,7 +447,6 @@ img{
     }
     h2{
         text-transform: uppercase;
-        font-family: 'Circe Rounded regular';
         font-size: 30px
     }
     img{
@@ -481,16 +487,10 @@ img{
         text-decoration: underline;
         font-weight: 600;
     }
-    h2{
-        font-family: 'Circe Rounded regular';
-    }
     p{
         font-family: 'Circe Rounded light';
         font-size: 17px;
         font-weight: 600;
-    }
-    h3{
-        font-family: 'Circe Rounded regular';   
     }
 }
 .article{
@@ -522,8 +522,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    h2{
-        font-family: 'Circe Rounded regular';        
+    h2{      
         color: #4E2D2D;
     }
 }
@@ -556,7 +555,7 @@ img{
 }
 .card{
     // outline: 3px solid black;
-    border: 2px solid #E7E7E7;
+    border: 1px solid #E7E7E7;
     padding: 10px;
     background-color: white;
     width: 200px;
@@ -577,16 +576,22 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.5s ease;
+    button{
+        &:active{
+            color: black;
+            font-weight: 1000;
+            background-color: #ffc18b;
+            transition: 0.1s ease;
+            box-shadow: 0px 0px 10px 0px black;
+        }
+    }
 }
 .footer{
     padding-top:10px ;
 }
 .page-footer{
-    
     background-color: white;
-    h2{
-        font-family: 'Circe Rounded regular';
-    }
     ul{
         padding: 0;
     }
@@ -642,7 +647,6 @@ img{
     }    
     h3{
         color: #4E2D2D;
-        font-family: 'Circe Rounded regular';
     }
     p{
         font-family: 'Circe Rounded light';
@@ -655,9 +659,10 @@ img{
     top: 130px;
     right: 30px;
     background-color: white;
+    border: 1px solid #D8D8D8;
     width: 460px;
     height: 577px;
-    z-index: 4;
+    z-index: 3;
     border-radius: 5px;
     h2{
         font-family:'Circe Rounded regular' ;
@@ -822,10 +827,121 @@ img{
         pointer-events: none;
     }
 }
-.modal-login{
+.modal{
+    // display: none;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 50px;
+    right: 33%;
+    width: 380px;
+    height: 430px;
+    background-color: white;
+    padding: 20px 30px;
+    z-index: 5;
+    font-family: 'roboto';
+    border-radius: 10px;
+    input{
+        margin-bottom: 10px;
+    }
+    h2{
+        margin: 0;
+        border-bottom: 1px solid #BFBFBF;
+    }
+}
+.modal-login{
+    display: none;
+}
+.modal-registration{
+    top:10px;
+    display: none;
+    height: 630px;
+}
+.form-modal{
+    display: flex;
+    flex-direction: column;
+    label{
+        margin: 5px 0;
+        display: flex;
+        justify-content: space-between;
+        // flex-direction: column;
+        font-family: 'Circe Rounded regular' ;
+        font-weight: 500;
+    }
+    button{
+        font-weight: 1000;
+        font-size: 16px;
+        &:active{
+            box-shadow: 0px 0px 5px 0px black;
+        }
+    }
+}
+.modal-input{
+    
+    font-family: 'roboto';
+    padding: 15px ;
+    outline: none;
+    border: 1px solid #BFBFBF;
+    border-radius: 10px;
+    &:hover{
+    outline: none;
+    }
+    &::placeholder{
+        color:#BFBFBF ;
+    }
+}
+.restoration-password{
+    margin-top: 40px;
+    font-size: 14px;
+    text-align: center;
+    a{
+        color: #E78634;
+        display: flex;
+        justify-content: center;
+    }
+}
+.checbox_modal-registration{
+    display: flex;
+    align-items: top;
+    position: relative;
+    // outline: 3px solid black;
+    label{
+        display: flex;
+        flex-direction: column;
+    }
+    a{
+        color: #E78634;
+        width: 100%;
+    }
+}
+.checbox_modal-registration{
+    input[type="checkbox"] {
+        opacity: 0;
+    }
+    input[type="checkbox"]~label::before{
+        content: '';
+        font-size: 10px;
+        top:5px;
+        left: 0px;
+        position: absolute;
+        text-align: center;
+        color:white;
+        line-height: 10px;
+        width: 15px;
+        height: 15px;
+        border: 1px solid #000;
+        border-radius: 0.25em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input[type="checkbox"]:checked ~ label::before {
+        color: #E78634;
+        border: 1px solid #E78634;
+        content: url(../images/VectorCheckbox.svg);
+      }
+}
+.alert{
+    display: none;
+    color: red;
 }
 // .overlay{
 

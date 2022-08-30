@@ -13,9 +13,10 @@
   top: 50px;
   transition: 1s ease;
   transform: translateY(-140%);
-  z-index: 2;
+  z-index: 4;
   padding: 40px;
   padding-top: 20px;
+  font-family: "roboto";
 }
 
 .wraper_nav-phone {
@@ -242,6 +243,9 @@
   .container-last-view {
     width: 620px;
   }
+  .modal {
+    right: 25%;
+  }
 }
 @media (max-width: 750px) {
   .container {
@@ -316,8 +320,15 @@
     align-items: center;
     flex-direction: column;
   }
+  .modal-basket {
+    width: 100%;
+    right: 0;
+  }
   .container-last-view {
     width: 410px;
+  }
+  .modal {
+    right: 13%;
   }
 }
 @media (max-width: 450px) {
@@ -423,5 +434,20 @@
   }
   .container-last-view {
     width: 200px;
+  }
+  .basket-link {
+    margin: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .final-price {
+    margin-left: 60px;
+  }
+  .modal {
+    right: 3%;
+    width: 300px;
+  }
+  .modal-registration {
+    height: 700px;
   }
 }/*# sourceMappingURL=style-phone.css.map */
